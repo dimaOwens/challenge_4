@@ -1,23 +1,24 @@
-
-
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
 class App extends Component {
     constructor() {
         super();
+
         this.state = {
             value: ""
-        }
-        this.handleChange.bind(this);
+        };
+
+        this.handleChange = this.handleChange.bind(this);
     }
+
     handleChange(event) {
         const { value } = event.target;
         this.setState(() => {
             return {
                 value
-            }
-        })
+            };
+        });
     }
 
     render() {
@@ -29,9 +30,8 @@ class App extends Component {
                     onChange={this.handleChange}
                 />
             </form>
-        )
+        );
     }
-
 }
 
 export default App;
